@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -25,10 +26,18 @@ body {
 
 .items {
   min-width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #fff;
+  position: absolute;
+  right: -100%;
 }
+
+/* .happybirthday {
+  animation: nextSlide .5s cubic-bezier(0, 0, 0.1, 1);
+} */
 
 .btn {
   cursor: pointer;
@@ -37,31 +46,72 @@ body {
   box-shadow: 0 0 7px 1px #b9b8b8;
   border-radius: 50%;
   padding: 4px;
-  transition: .3s;
+  transition: .2s;
 }
 
 .btn ion-icon {
   width: 100%;
   height: 100%;
-  color: #4e4e4e;
+  color: #272829;
+  transition: .2s;
+}
+
+@media (max-width: 1440px) {
+  .btn:hover {
+    background: #272829;
+  }
+
+  .btn:hover ion-icon {
+    color: #fff;
+  }
+}
+
+@media (max-width: 768px) {
+  .btn:active {
+    background: #272829;
+  }
+
+  .btn:active ion-icon {
+    color: #fff;
+  }
 }
 
 @keyframes nextSlide {
   0% {
-    transform: translateX(0);
+    right: -100%;
   }
 
   100% {
-    transform: translateX(-100%);
+    right: 0%;
+  }
+}
+
+@keyframes nextSlidePre {
+  0% {
+    right: 0%;
+  }
+
+  100% {
+    right: 100%;
   }
 }
 
 @keyframes preSlide {
   0% {
-    transform: 0;
+    right: 0;
   }
 
   100% {
-    transform: translateY(100%);
+    right: -100%;
+  }
+}
+
+@keyframes preSlideNext {
+  0% {
+    right: 100%;
+  }
+
+  100% {
+    right: 0%;
   }
 }
