@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  width: 90%;
+  height: 30em;
+  box-shadow: 0 0 7px 1px #b9b8b8;
+  border-radius: 0.75em;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.items {
+  width: 100em;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
