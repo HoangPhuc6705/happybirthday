@@ -41,6 +41,7 @@ function nextPage() {
 }
 
 function prePage() {
+  if (slideIndex - 1 < 0) return;
   show_slide[slideIndex].style.right = '-100%';
   show_slide[slideIndex].style.animation = 'preSlide .5s ease-in-out';
   dots[slideIndex].style.background = '#FCFFE0';
