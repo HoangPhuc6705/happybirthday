@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Lobster&family=Quicksand:wght@300..700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -12,12 +16,14 @@ body {
   justify-content: space-evenly;
   align-items: center;
   position: relative;
+  background: url(./image/backgr.jpg) no-repeat;
+  background-size: 100%;
 }
 
 .main {
-  width: 80%;
+  width: 70%;
   height: 30em;
-  box-shadow: 0 0 7px 1px #b9b8b8;
+  box-shadow: 5px 5px 7px 1px #0000003f;
   border-radius: 0.75em;
   display: flex;
   flex-direction: row;
@@ -28,24 +34,132 @@ body {
   min-width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
   background: #fff;
   position: absolute;
   right: -100%;
 }
 
+.happybirthday {
+  background: #102C57;
+}
+
+.happybirthday_decor {
+  position: absolute;
+  background-size: 10em;
+  width: 80%;
+  transform: translate(0em, -10em) rotate(-15deg);
+  z-index: 0;
+}
+
+.happybirthday .content {
+  width: 70%;
+  color: #fff;
+}
+
+.happybirthday .imageIntro {
+  /* width: 40%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(-5deg);
+  overflow: visible;
+}
+
+.imageIntro_image {
+  width: 15em;
+  height: 19em;
+  border-radius: 0.3em;
+  background: #fff;
+  padding: 0.75em;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 8px 8px 0 2px #0000005b;
+}
+
+.imageIntro_image_name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 0.75em;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+}
+
+.imageIntro_image_link {
+  width: 100%;
+  border-radius: 0.3em;
+}
+
+/* https://i.pinimg.com/736x/41/44/22/4144226c9253257ba77453d189f678f1.jpg */
+
 /* .happybirthday {
   animation: nextSlide .5s cubic-bezier(0, 0, 0.1, 1);
 } */
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content_title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  z-index: 1;
+}
+
+.content_title h1 {
+  font-family: "Bungee", sans-serif;
+  letter-spacing: 1px;
+}
+
+.content_title h3 {
+  font-family: "Lobster", sans-serif;
+}
+
+.content_button {
+  cursor: pointer;
+  transform: translateY(4em);
+  appearance: none;
+  outline: none;
+  border: none;
+  background: #74E291;
+  padding: 1em 2em 1em 2em;
+  border-radius: 5em;
+  font-family: "Quicksand", sans-serif;
+  color: #FEFDED;
+  font-weight: bold;
+  font-size: 1.1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #102C57;
+}
+
+
+.content_button ion-icon {
+  transition: .3s;
+}
+
+.content_button:hover ion-icon {
+  transform: translateX(0.5em);
+}
 
 .btn {
   cursor: pointer;
   width: 3em;
   height: 3em;
-  box-shadow: 0 0 7px 1px #b9b8b8;
+  background: #fff;
   border-radius: 50%;
   padding: 4px;
+  box-shadow: 0 0 7px 1px #00000046;
   transition: .2s;
 }
 
@@ -58,21 +172,13 @@ body {
 
 @media (max-width: 1440px) {
   .btn:hover {
-    background: #272829;
-  }
-
-  .btn:hover ion-icon {
-    color: #fff;
+    background: #c4c4c4;
   }
 }
 
 @media (max-width: 768px) {
   .btn:active {
-    background: #272829;
-  }
-
-  .btn:active ion-icon {
-    color: #fff;
+    background: #c9c9c9;
   }
 }
 
@@ -114,4 +220,59 @@ body {
   100% {
     right: 0%;
   }
+}
+
+.process {
+  position: absolute;
+  bottom: 2em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.outline_dot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2em;
+  height: 2em;
+}
+
+.dots {
+  width: 0.7em;
+  height: 0.7em;
+  border-radius: 2em;
+  background: #FCFFE0;
+  /* background: #96ffb2; */
+  transition: 0.5s;
+}
+
+.cake {
+  z-index: 1;
+  background: #EEF7FF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cake .cakesvg svg {
+  width: 30em;
+  height: 30em;
+}
+
+.bestwishes {
+  z-index: 1;
+}
+
+.dream {
+  z-index: 1;
+}
+
+.images {
+  z-index: 1;
+}
+
+.sourcecode {
+  z-index: 1;
 }
