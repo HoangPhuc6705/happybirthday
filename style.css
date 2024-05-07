@@ -52,6 +52,18 @@ body {
   z-index: 0;
 }
 
+.happybirthday_lamp svg .lamp {
+  fill: #272727;
+}
+
+
+.happybirthday_lamp {
+  width: 35%;
+  position: absolute;
+  transform: translate(13em, 6em) rotate(-10deg);
+}
+
+
 .happybirthday .content {
   width: 70%;
   color: #fff;
@@ -91,6 +103,24 @@ body {
 .imageIntro_image_link {
   width: 100%;
   border-radius: 0.3em;
+}
+
+.imageIntro .flower {
+  width: 45%;
+  position: absolute;
+  right: -3em;
+  top: 2em;
+  animation: flowerAnimation 20s linear infinite;  
+}
+
+@keyframes flowerAnimation {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* https://i.pinimg.com/736x/41/44/22/4144226c9253257ba77453d189f678f1.jpg */
@@ -264,8 +294,12 @@ body {
 }
 
 .fire {
-  animation: turnfire .75s linear infinite;
+  /* transform-origin: 50% 50%; */
+  animation: turnfire 2s ease-in-out infinite;
+  /* animation: rotateFire .75s linear infinite; */
 }
+
+
 
 .off {
   font-family: "Quicksand", sans-serif;
@@ -308,6 +342,7 @@ body {
   }
 }
 
+
 .treoco {
   width: 100%;
   position: absolute;
@@ -318,6 +353,13 @@ body {
   width: 100%;
   position: absolute;
   transform: rotate(-25deg) translate(-7em, -15em) scale(0.7);
+}
+
+.treoco3 {
+  width: 100%;
+  position: absolute;
+  transform: translateY(-15em) scale(0.7);
+  /* z-index: 1; */
 }
 
 .off p {
@@ -337,24 +379,55 @@ body {
 
 .gift {
   cursor: pointer;
-  width: 40%;
+  width: 15%;
   position: absolute;
-  z-index: -1;
-  right: -6em;
-  bottom: -6em;
-  transform: rotate(-45deg);
+  z-index: 1;
+  right: 2em;
+  bottom: 1em;
   overflow: visible;
   z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .gift svg {
   overflow: visible;
 }
 
+
 .open {
-  transform-origin: 80% 45%;
-  animation: open 5s ease-in-out infinite;
+  transform-origin: 100% 35%;
+  transition: .25s ease-out;
+  /* animation: open 2s ease-in-out infinite; */
 }
+
+.gift .gift_box:hover .open {
+  transform: rotate(90deg);
+}
+
+.gift_box {
+  z-index: 1;
+}
+
+.chym {
+  z-index: 0;
+  position: absolute;
+  width: 50%;
+  transform: translateY(30%);
+}
+
+.gift:hover .chym{
+  /* transform: translateY(-100%); */
+  animation: bird 0.75s ease-out;
+  animation-delay: .5s;
+  animation-fill-mode: forwards;
+} 
+
+.gift:not(:hover) .chym {
+  animation: closebird .25s ease-out;
+}
+
 
 @keyframes open {
   0% {
@@ -366,8 +439,176 @@ body {
   }
 }
 
+
+@keyframes close {
+  0% {
+    transform: rotate(90deg);
+  }
+
+  50% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes bird {
+  0% {
+    transform: translateY(30%);
+  }
+
+  100% {
+    transform: translateY(-90%);
+  }
+}
+
+@keyframes closebird {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(30%);
+  }
+}
+
+.cake .cake_images {
+  font-family: "Quicksand", san-rerif;
+  font-size: 0.8em;
+  font-weight: 700;
+  position: absolute;
+  width: 15%;
+  bottom: 5em;
+  left: 7em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  box-shadow: 5px 5px 7px 1px #00000021;
+  transform: rotate(-10deg);
+  padding: 1em;
+  border-radius: 0.5em;
+  gap: 5px;
+}
+
+.cake .cake_images img {
+  background-size: cover;
+  width: 100%;
+  border-radius: 0.4em;
+}
+
+.cake .cake_image_content {
+  text-align: center;
+}
+
 .bestwishes {
   z-index: 1;
+  background: #102C57;
+}
+
+.bestwishes .bestwishes_image_slide {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bestwishes_image_slide_inside {
+  width: 20em;
+  height: 25em;
+  background: #EEF7FF;
+  border-radius: 0.5em;
+  padding: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1em;
+  transform: rotate(-5deg);
+  box-shadow: 10px 10px 0 0 #00000077;
+}
+
+.bestwishes_image_slide_indside_image {
+  width: 100%;
+  /* position: absolute; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+}
+
+#bestwishes_slide_images {
+  border-radius: 0.4em;
+  width: 100%;
+}
+
+@keyframes frierenSlideShow {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes frierenSlideShowOut {
+  from {
+    opacity: 1;
+  }
+  
+  to {
+    opacity: 0;
+  }
+}
+
+.fadeIn {
+  animation: frierenSlideShow .5s;
+}
+
+.faceOut {
+  animation: frierenSlideShowOut .5s;
+}
+
+.bestwishes_image_slide_indside_content {
+  font-family: "Quicksand", san-rerif;
+  text-align: center;
+  font-weight: 700;
+}
+
+.bestwishes_content {
+  width: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+}
+
+.bestwishes_content h2 {
+  font-family: "Bungee", sans-serif;
+}
+
+.bestwishes_content_inside {
+  width: 20em;
+  height: 18em;
+  padding: 0 0.5em 0 0;
+  font-family: "Quicksand", san-rerif;
+  overflow: auto;
+  text-align: justify;
+  text-indent: 3em;
+}
+
+.bestwishes_content_inside::-webkit-scrollbar {
+  width: 0.4em;
+  /* border: 1px solid #74E291; */
+  background: #0000003a;
+  border-radius: 0.5em;
+}
+
+.bestwishes_content_inside::-webkit-scrollbar-thumb {
+  width: 100%;
+  background: #74E291;
+  border-radius: 0.5em;
 }
 
 .dream {

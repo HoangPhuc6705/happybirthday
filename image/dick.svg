@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620.52 855.27">
+  <g id="Layer_5" data-name="Layer 5">
+    <path d="m615.52,697.64c0,84.3-68.33,152.63-152.63,152.63-77.32,0-141.21-57.49-151.25-132.06-.91-6.73-1.38-13.59-1.38-20.57,0,6.98-.47,13.84-1.38,20.57-10.04,74.57-73.93,132.06-151.25,132.06-84.3,0-152.63-68.33-152.63-152.63s68.33-152.63,152.63-152.63c11.25,0,22.21,1.22,32.77,3.52V205.21h17.32c-26.25,0-47.53-21.28-47.53-47.53v-3.58c0-82.35,66.76-149.1,149.11-149.1h1.92c82.35,0,149.11,66.75,149.11,149.1v3.58c0,26.25-21.28,47.53-47.53,47.53h17.32v343.32c10.56-2.3,21.52-3.52,32.77-3.52,84.3,0,152.63,68.33,152.63,152.63Z" style="fill: #fff9d0; stroke: #f8c794; stroke-linecap: round; stroke-linejoin: round; stroke-width: 10px;"/>
+    <line x1="235.97" y1="206.07" x2="385.97" y2="206.07" style="fill: none; stroke: #f8c794; stroke-linecap: round; stroke-linejoin: round; stroke-width: 10px;"/>
+    <line x1="309.3" y1="5" x2="309.3" y2="42.35" style="fill: none; stroke: #f8c794; stroke-linecap: round; stroke-linejoin: round; stroke-width: 10px;"/>
+    <path d="m574.12,732.35c0,41.93-33.93,75.86-75.86,75.86" style="fill: none; stroke: #f8c794; stroke-linecap: round; stroke-linejoin: round; stroke-width: 10px;"/>
+    <path d="m47.1,732.35c0,41.93,33.93,75.86,75.86,75.86" style="fill: none; stroke: #f8c794; stroke-linecap: round; stroke-linejoin: round; stroke-width: 10px;"/>
+    <line x1="396.69" y1="324.78" x2="396.69" y2="470.07" style="fill: none; stroke: #f8c794; stroke-linecap: round; stroke-linejoin: round; stroke-width: 10px;"/>
+  </g>
+</svg>

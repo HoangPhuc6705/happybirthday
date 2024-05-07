@@ -107,3 +107,4 @@ dots[0].style.width = '2em';
 dots[0].style.background = '#96ffb2'
 const dots_width = '0.7em';
 const dots_width_trans = '2em';
+

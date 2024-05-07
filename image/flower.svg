@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+  <g transform="matrix(1,0,0,1,0,0)">
+    <path
+      d="M 410.8 694 c 0 -83.1 29 -155.6 72.1 -194.4 c 43.1 38.8 72.1 111.3 72.1 194.4 s -29 155.6 -72.1 194.4 c -43.1 -38.8 -72.1 -111.4 -72.1 -194.4 Z"
+      style="fill: #5bbcff; stroke: #eef7ff; stroke-width: 40px; stroke-miterlimit: 10" />
+    <path
+      d="M 278.9 534.5 c 72 -41.5 149.3 -52.7 204.5 -34.8 c -12 56.8 -60.4 118.2 -132.3 159.7 c -72 41.5 -149.3 52.7 -204.5 34.8 c 12.1 -56.8 60.4 -118.2 132.3 -159.7 Z"
+      style="fill: #5bbcff; stroke: #eef7ff; stroke-width: 40px; stroke-miterlimit: 10" />
+    <path
+      d="M 351 340.5 c 72 41.5 120.3 102.9 132.3 159.7 c -55.2 17.9 -132.5 6.8 -204.5 -34.8 c -72 -41.5 -120.3 -102.9 -132.3 -159.7 c 55.2 -17.9 132.5 -6.8 204.5 34.8 Z"
+      style="fill: #5bbcff; stroke: #eef7ff; stroke-width: 40px; stroke-miterlimit: 10" />
+    <path
+      d="M 555.1 306 c 0 83.1 -29 155.6 -72.1 194.4 c -43.1 -38.8 -72.1 -111.3 -72.1 -194.4 s 29 -155.6 72.1 -194.4 c 43.1 38.8 72.1 111.4 72.1 194.4 Z"
+      style="fill: #5bbcff; stroke: #eef7ff; stroke-width: 40px; stroke-miterlimit: 10" />
+    <path
+      d="M 687 465.5 c -72 41.5 -149.3 52.7 -204.5 34.8 c 12 -56.8 60.4 -118.2 132.3 -159.7 c 72 -41.5 149.3 -52.7 204.5 -34.8 c -12.1 56.8 -60.4 118.2 -132.3 159.7 Z"
+      style="fill: #5bbcff; stroke: #eef7ff; stroke-width: 40px; stroke-miterlimit: 10" />
+    <path
+      d="M 614.9 659.5 c -72 -41.5 -120.3 -102.9 -132.3 -159.7 c 55.2 -17.9 132.5 -6.8 204.5 34.8 c 72 41.5 120.3 102.9 132.3 159.7 c -55.2 17.9 -132.5 6.8 -204.5 -34.8 Z"
+      style="fill: #5bbcff; stroke: #eef7ff; stroke-width: 40px; stroke-miterlimit: 10" />
+  </g>
+  <circle cx="482.9" cy="500" r="85.8"
+    style="fill: #f3ca52; stroke: #eef7ff; stroke-width: 40px; stroke-miterlimit: 10" />
+    <path d="M 37 6 S 214 204 214 204" fill="rgb(255, 255, 255)"/>
+</svg>
