@@ -74,13 +74,13 @@ pre_button.addEventListener('click', () => {
 
 
 // key
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'ArrowRight') {
-    nextPage();
-  } else if (event.code === 'ArrowLeft') {
-    prePage();
-  }
-})
+// document.addEventListener('keydown', (event) => {
+//   if (event.code === 'ArrowRight') {
+//     nextPage();
+//   } else if (event.code === 'ArrowLeft') {
+//     prePage();
+//   }
+// })
 
 // const background = [
 //   '#C3E2C2',
@@ -95,6 +95,14 @@ document.addEventListener('keydown', (event) => {
 //   show_slide[i].style.background = background[i];
 // }
 
+const thoi_nen = document.querySelector('.turnoff');
+thoi_nen.addEventListener('click', () => {
+  const fire = document.querySelectorAll('.fire');
+  for (let i in fire) {
+    fire[i].style.visibility = 'hidden';
+  }
+})
+
 const content_button = document.querySelector('.content_button');
 content_button.addEventListener('click', () => {
   nextPage();
@@ -108,3 +116,61 @@ dots[0].style.background = '#96ffb2'
 const dots_width = '0.7em';
 const dots_width_trans = '2em';
 
+// 
+
+const confirm = document.getElementById('confirm');
+confirm.addEventListener('click', (event) => {
+  event.preventDefault();
+
+  // console.log(expand_lock);
+  confirm.innerHTML = 'Không thể nhập hoặc chỉnh sửa';
+  confirm.id = 'confirm_dis';
+  confirm.disabled = true;
+  expand_lock = false;
+  const turnoff = {
+    open: false
+  }
+
+  axios.put('https://vercel-sever-9gh4.vercel.app/lockeds', turnoff).then(res => console.log('Da cap nhat du lieu:', res.data)).catch(err => console.log('Loi khi cap nhat du lieu:', err));
+
+  const your_dream_text = document.getElementById('yourDream').value;
+  document.getElementById('yourDream').disabled = true;
+
+  const data = {
+    text: your_dream_text
+  }
+
+  axios.post('https://vercel-sever-9gh4.vercel.app/your_dream', data).then(() => {
+    console.log('Gửi dữ liệu thành công:', data);
+  }).catch(error => console.log('Can not sent data:', error));
+})
+
+// Khoa/mo uoc nguyen
+let lock;
+let expand_lock;
+// https://vercel-sever-9gh4.vercel.app/your_dream
+axios.get('https://vercel-sever-9gh4.vercel.app/lockeds')
+  .then(respone => {
+    // console.log(respone.data);
+    lock = respone.data;
+    // console.log(lock);
+    // console.log(lock.open);
+    if (lock.open) {
+      confirm.disabled = false;
+    } else {
+      confirm.disabled = true;
+      confirm.innerHTML = 'Không thể nhập hoặc chỉnh sửa';
+      confirm.id = 'confirm_dis';
+      document.getElementById('yourDream').disabled = true;
+      document.getElementById('yourDream').placeholder = 'Hãy đợi ngày này năm sau nhé!'
+    }
+
+    expand_lock = lock.open;
+  })
+  .catch(error => {
+    console.log('Khong the lay duoc du lieu:', error);
+  })
+
+
+
+// console.log(lock);
